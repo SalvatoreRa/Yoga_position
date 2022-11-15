@@ -60,8 +60,8 @@ def main():
     st.title('YOGA position prediction')
     st.subheader('Upload an image and run the model: it will return most probable yoga position')
     response = requests.get(img_path)
-    image = Image.open(BytesIO(response.content))
-    st.image(image, caption=capt, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+    img_screen = Image.open(BytesIO(response.content))
+    st.image(img_screen, caption=capt, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.markdown('This webapp is powered by deeplearning. A convolutional neural network has been trained on a dataset of YOGA images')
     
     
