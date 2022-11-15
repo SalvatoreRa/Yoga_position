@@ -44,6 +44,7 @@ def predict(model, categories, image):
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ])
     input_tensor = preprocess(image)
+    st.write('loaded image in the model')
     input_batch = input_tensor.unsqueeze(0).to(device)
 
     with torch.no_grad():
