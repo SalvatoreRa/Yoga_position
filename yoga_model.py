@@ -47,7 +47,7 @@ def predict(model, categories, image):
     input_batch = input_tensor.unsqueeze(0).to(device)
 
     with torch.no_grad():
-        output = model(input_batch)
+        output = model(input_batch).cpu()
 
     probabilities = torch.nn.functional.softmax(output[0], dim=0)
 
