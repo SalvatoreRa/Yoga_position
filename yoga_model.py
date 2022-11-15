@@ -6,6 +6,7 @@ from torchvision import transforms
 import requests
 from io import BytesIO
 
+device = 'cpu'
 MODEL_PATH = 'models/model.pt'
 LABELS_PATH = 'models/model_classes.txt'
 
@@ -43,7 +44,7 @@ def predict(model, categories, image):
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
     ])
     input_tensor = preprocess(image)
-    input_batch = input_tensor.unsqueeze(0)
+    input_batch = input_tensor.unsqueeze(0).to(device)
 
     with torch.no_grad():
         output = model(input_batch)
