@@ -13,7 +13,7 @@ photo by the author using Dall-E
 ## Information about
 
 * dataset: [Kaggle](https://www.kaggle.com/datasets/tr1gg3rtrash/yoga-posture-dataset)
-* Medium corresponding article: [Medium link]()
+* Medium corresponding article: [Medium link](https://medium.com/mlearning-ai/make-an-app-with-streamlit-in-minutes-bec48ee19d67)
 
 This is the code for the tutorial on how to build and to deploy a web app with [streamlit](https://docs.streamlit.io/). Contained here is both the code used for pre-processing the data, training the [convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) model (trained with [PyTorch](https://pytorch.org/) ),  building the app, and to deploy on the cloud. Also, here you can find the dataset used.
 
