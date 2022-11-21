@@ -56,7 +56,7 @@ def predict(model, categories, image):
 
     probs, yoga_pos = torch.topk(probabilities, len(categories))
     probs, yoga_pos = probs[:5], yoga_pos[:5]
-    for i in range(all_prob.size(0)):
+    for i in range(probs.size(0)):
         st.write(categories[yoga_pos[i]], probs[i].item())
 
 
