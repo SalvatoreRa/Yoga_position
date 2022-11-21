@@ -12,7 +12,7 @@ photo by the author using Dall-E
 &nbsp;
 ## Information about
 
-* dataset: [Kaggle](https://www.kaggle.com/datasets/niharika41298/yoga-poses-dataset)
+* dataset: [Kaggle](https://www.kaggle.com/datasets/tr1gg3rtrash/yoga-posture-dataset)
 * Medium corresponding article: [Medium link]()
 
 &nbsp;
