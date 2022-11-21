@@ -67,14 +67,14 @@ def main():
     img_screen = Image.open(BytesIO(response.content))
     st.image(img_screen, caption=capt, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.markdown('This webapp is powered by deeplearning. A convolutional neural network has been trained on a dataset of YOGA images')
-    
+    st.markdown('[you can find the coda here](https://github.com/SalvatoreRa/Yoga_position)')
     
     model = load_model(MODEL_PATH)
     categories = load_labels(LABELS_PATH)
     image = load_image()
     result = st.button('Run on image')
     if result:
-        st.write('Calculating results...')
+        st.write('Making prediction: please wait')
         predict(model, categories, image)
 
 
