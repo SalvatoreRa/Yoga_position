@@ -25,6 +25,7 @@ The app can be found at this link, you can test yourself:
 
 [app](https://salvatorera-yoga-position-yoga-model-8um8ih.streamlit.app/)
 
+The code is an example of how to develop a [computer vision](https://en.wikipedia.org/wiki/Computer_vision) app for classification. Having used [transfer learning](https://cs231n.github.io/transfer-learning/) in this case, the model is easily reusable for other possible tasks. 
 
 
 &nbsp;
