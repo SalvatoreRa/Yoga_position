@@ -15,6 +15,16 @@ photo by the author using Dall-E
 * dataset: [Kaggle](https://www.kaggle.com/datasets/tr1gg3rtrash/yoga-posture-dataset)
 * Medium corresponding article: [Medium link]()
 
+This is the code for the tutorial on how to build and to deploy a web app with [streamlit](https://docs.streamlit.io/). Contained here is both the code used for pre-processing the data, training the [convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) model (trained with [PyTorch](https://pytorch.org/) ), and building the app. Also, here is the dataset used.
+
+The app uses an artificial intelligence model to predict the position of yoga in an image. The user can upload an image, press a button, and get the top 5 most likely positions.
+
+The model used is [ResNet18](https://pytorch.org/vision/main/models/generated/torchvision.models.resnet18.html), an artificial intelligence model (originally trained on ImageNet) and repurposed for this tutorial.
+
+The app can be found at this link:
+
+[app](https://salvatorera-yoga-position-yoga-model-8um8ih.streamlit.app/)
+
 &nbsp;
 
 # License
