@@ -7,8 +7,8 @@ import requests
 from io import BytesIO
 
 device = 'cpu'
-MODEL_PATH = 'models/model.pt'
-LABELS_PATH = 'models/model_classes.txt'
+model_dir = 'models/model.pt'
+Yoga_dir = 'models/model_classes.txt'
 
 img_path = 'https://github.com/SalvatoreRa/Yoga_position/blob/main/DALL%C2%B7E%202022-11-15%2015.55.47%20-%20digital%20art%20of%20a%20humanoide%20android%20doing%20yoga%20in%20a%20park,%20high%20quality,%204k.png?raw=true'
 
@@ -68,9 +68,9 @@ def main():
     st.image(img_screen, caption=capt, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.markdown('This webapp is powered by deeplearning. A convolutional neural network has been trained on a dataset of YOGA images')
     st.markdown('[you can find the coda here](https://github.com/SalvatoreRa/Yoga_position)')
-    
-    model = load_model(MODEL_PATH)
-    categories = load_labels(LABELS_PATH)
+    st.markdown('[here you can find the companion tutorial]()')
+    model = load_model(model_dir)
+    categories = load_labels(Yoga_dir)
     image = load_image()
     result = st.button('Run on image')
     if result:
