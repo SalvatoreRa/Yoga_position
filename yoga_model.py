@@ -54,10 +54,10 @@ def predict(model, categories, image):
 
     probabilities = torch.nn.functional.softmax(output[0], dim=0)
 
-    all_prob, all_catid = torch.topk(probabilities, len(categories))
-    all_prob, all_catid = all_prob[:5], all_catid[:5]
+    probs, yoga_pos = torch.topk(probabilities, len(categories))
+    probs, yoga_pos = probs[:5], yoga_pos[:5]
     for i in range(all_prob.size(0)):
-        st.write(categories[all_catid[i]], all_prob[i].item())
+        st.write(categories[yoga_pos[i]], probs[i].item())
 
 
 def main():
