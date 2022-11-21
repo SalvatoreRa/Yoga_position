@@ -14,7 +14,7 @@ img_path = 'https://github.com/SalvatoreRa/Yoga_position/blob/main/DALL%C2%B7E%2
 
 capt = 'An android playing yoga in a park. Image created by the author with DALL-E'
 
-def load_image():
+def load_test_image():
     uploaded_file = st.file_uploader(label='Upload an image for test')
     if uploaded_file is not None:
         image_data = uploaded_file.getvalue()
@@ -30,10 +30,10 @@ def load_model(model_path):
     return model
 
 
-def load_labels(labels_file):
+def load_yoga_positions(labels_file):
     with open(labels_file, "r") as f:
-        categories = [s.strip() for s in f.readlines()]
-        return categories
+        yoga_poses = [s.strip() for s in f.readlines()]
+        return yoga_poses
 
 
 def predict(model, categories, image):
@@ -70,10 +70,10 @@ def main():
     st.markdown('[you can find the coda here](https://github.com/SalvatoreRa/Yoga_position)')
     st.markdown('[here you can find the companion tutorial]()')
     model = load_model(model_dir)
-    categories = load_labels(Yoga_dir)
-    image = load_image()
-    result = st.button('Predict the Yoga pose')
-    if result:
+    categories = load_yoga_positions(Yoga_dir)
+    image = load_test_image()
+    predictions = st.button('Predict the Yoga pose')
+    if predictions:
         st.write('Making prediction: please wait')
         predict(model, categories, image)
 
