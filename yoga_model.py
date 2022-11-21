@@ -68,7 +68,7 @@ def main():
     st.image(img_screen, caption=capt, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
     st.markdown('This webapp is powered by deeplearning. A convolutional neural network has been trained on a dataset of YOGA images')
     st.markdown('[you can find the coda here](https://github.com/SalvatoreRa/Yoga_position)')
-    st.markdown('[here you can find the companion tutorial]()')
+    st.markdown('[here you can find the companion tutorial](https://medium.com/mlearning-ai/make-an-app-with-streamlit-in-minutes-bec48ee19d67)')
     model = load_model(model_dir)
     categories = load_yoga_positions(Yoga_dir)
     image = load_test_image()
