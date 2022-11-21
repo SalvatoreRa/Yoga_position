@@ -72,7 +72,7 @@ def main():
     model = load_model(model_dir)
     categories = load_labels(Yoga_dir)
     image = load_image()
-    result = st.button('Run on image')
+    result = st.button('Predict the Yoga pose')
     if result:
         st.write('Making prediction: please wait')
         predict(model, categories, image)
